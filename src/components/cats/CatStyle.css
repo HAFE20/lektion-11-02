@@ -1,0 +1,16 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 0em 2em;
+}
+
+.form > * {
+	margin: 0.2em 0em;
+}
+
+.valid {
+	border-color: #14971E;
+}
+.invalid {
+	border-color: #E0471F;
+}
