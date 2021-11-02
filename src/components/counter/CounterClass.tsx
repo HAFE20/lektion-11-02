@@ -1,9 +1,20 @@
 import { Component } from "react";
 
+interface CounterProps {
+	// inga props - än så länge
+}
+interface CounterState {
+	value: number;
+}
+class CounterClass extends Component<CounterProps, CounterState> {
+	constructor(props: CounterProps) {
+		super(props)  // anropa constructor i Component
 
-class CounterClass extends Component {
-	state = {
-		value: 1
+		this.state = {
+			value: 1
+		}
+
+		this.increase = this.increase.bind(this);
 	}
 
 	render() {
@@ -23,7 +34,7 @@ class CounterClass extends Component {
 			value: this.state.value + 1
 		})
 	}
-	decrease() {
+	decrease = () => {
 		this.setState({ value: this.state.value - 1 })
 	}
 }
@@ -40,5 +51,6 @@ value är exempel på en property
 function f(param1, param2) {}
 Property = egenskap, "det som ligger i objekt"
 */
+
 
 export default CounterClass
